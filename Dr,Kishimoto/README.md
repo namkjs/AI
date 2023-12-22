@@ -44,7 +44,7 @@ Prepare a table in the project report summarizing the performance for each algor
 
 ## State Representation
 
-class State:
+class State:  
 bool visited[N]; // flags for visited cities (true if visited, true if coming back for id=0)  
 int num_visited; // number of visited cities  
 int current_id; // id of the current city  
