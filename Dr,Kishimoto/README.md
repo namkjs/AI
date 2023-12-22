@@ -1,9 +1,5 @@
 # Traveling Salesperson Problem Solver
 
-## Project Overview
-
-In this team project, consisting of 4-5 members, the goal is to implement search algorithms to calculate optimal solution costs for the Traveling Salesperson Problem (TSP), a well-known NP-hard problem. The performance of these algorithms will be compared.
-
 ## The TSP Problem
 
 In TSP, given N cities, starting with the first city, a salesperson must visit each city exactly once and finally return to the first city. The objective is to travel with the smallest sum of edge costs on the route.
@@ -76,10 +72,6 @@ In the case of A*, the REACHED structure is crucial. Implement it as follows:
 
 Considering speed differences in various programming languages, no points will be deducted for slow run times stemming from language performance. However, a faster program in real-time is advantageous.
 
-### Encapsulation with Classes
-
-While not mandatory, using classes (e.g., in C++/Python) enhances code readability. Encapsulation with classes provides a clearer structure for the implementation.
-
 ### Identical Optimal Solutions
 
 As the goal is to find optimal solutions, ensure that the optimal solution costs are identical when the same problem is solved by different algorithms. Any differences may indicate a bug in the implementation.
@@ -90,23 +82,10 @@ Be aware that tied optimal scores may exist, leading to different optimal routes
 
 ### Function/Method Documentation
 
-Provide brief explanations for each function/method, including their arguments, returned values, and functionality. Incorporate these comments directly into your source code.
+Provide brief explanations for each function/method, including their arguments, returned values, and functionality. 
 
 ## Advanced Topic - Enhanced IDA*
 
 In response to the drawback of IDA* reexpanding the same nodes, an advanced enhancement involves implementing a hash table (transposition table). Refer to [this link](https://webdocs.cs.ualberta.ca/~tony/TechnicalReports/tr-ri-93-120.pdf) for details.
 
-Assume permission to preserve all states in the hash table, similar to A* (i.e., REACHED). Implement this enhanced version of IDA* to solve the TSP with h(n)=0 and the min-out heuristic. Compare its performance with the other algorithms.
-
-## Submission Details
-
-- **Due Date:** 11:59 PM December 22nd (sharp deadline).
-- **Submission Location:** Dr. Kien will receive the files; follow his guidelines.
-- **Submission Format:** Submit one zipped file containing the source code and a PDF file of the performance comparison tables.
-
-## Important Notes
-
-- Team members will receive the same marks; work effectively as a team.
-- Even if incomplete, submit the source code and tables showing your progress by the due date.
-- Begin early to allow ample time for implementation.
-- Consult with the instructor promptly for guidance on difficulties; hints and supplementary information will be provided as needed.
+Assume permission to preserve all states in the hash table, similar to A* (i.e., REACHED). Implement this enhanced version of IDA* to solve the TSP with h(n)=0 and the min-out heuristic. Compare its performance with the other algorithms. 
