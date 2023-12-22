@@ -26,7 +26,7 @@ def min_out_heuristic(state, costs):
     return min(costs[state.current_id][next_city] for next_city in unvisited_cities)
 
 
-def ida_star_search(initial_state, heuristic_func, costs, time_limit):
+def algorithm(initial_state, heuristic_func, costs, time_limit):
     start_time = timeit.default_timer()
     path = [0]  # Start from city 0
     bound = heuristic_func(initial_state, costs)
@@ -89,7 +89,6 @@ def ida_star_search(initial_state, heuristic_func, costs, time_limit):
 num_cities_list = [5, 10, 11, 12]
 num_instances = 5
 time_limit = 20 * 60  # 20 minutes in seconds
-
 for num_cities in num_cities_list:
     for instance in range(1, num_instances + 1):
         seed = instance
@@ -102,8 +101,7 @@ for num_cities in num_cities_list:
             optimal_path,
             expanded_nodes,
             generated_nodes,
-        ) = ida_star_search(initial_state, min_out_heuristic, costs, time_limit)
-
+        ) = algorithm(initial_state, min_out_heuristic, costs, time_limit)
         if run_time is not None and optimal_cost is not None:
             print(f"Results for {num_cities} cities with Seed {seed} are:")
             print(f"Run Time is: {run_time:.6f} seconds")

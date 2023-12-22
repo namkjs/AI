@@ -102,7 +102,6 @@ def a_star_algorithm(state, heuristic_func, costs, time_limit):
 num_cities_list = [5, 10, 11, 12]
 num_instances = 5
 time_limit = 20 * 60  # 20 minutes in seconds
-
 for num_cities in num_cities_list:
     for instance in range(1, num_instances + 1):
         seed = instance
@@ -116,7 +115,6 @@ for num_cities in num_cities_list:
             generated_nodes,
             optimal_path,
         ) = a_star_algorithm(initial_state, heuristic, costs, time_limit)
-
         if run_time is not None and optimal_cost is not None:
             print(f"Results for {num_cities} cities with Seed {seed} are:")
             print(f"Run Time is: {run_time:.6f} seconds")
